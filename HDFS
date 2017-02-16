@@ -1,0 +1,17 @@
+HDFS is a distributed file system that provides high-performance access to data across Hadoop clusters.
+HDFS is a key tool for managing pools of big data and supporting big data analytics applications.
+It is typically deployed on low-cost commodity hardware, where server failures are common. 
+The file system is designed to be highly fault-tolerant, 
+however, by facilitating the rapid transfer of data between compute nodes 
+and enabling Hadoop systems the system continues running even if a node fails. 
+When HDFS takes in data, it breaks the information down into separate pieces 
+and distributes them to different nodes in a cluster, allowing for parallel processing. 
+The file system also copies each piece of data multiple times(default replication factor being 3)  
+and distributes the copies to individual nodes, 
+placing at least one copy on a different server rack than the others. 
+As a result, the data on nodes that crash can be found elsewhere within a cluster, 
+which allows processing to continue while the failure is resolved.
+HDFS is built to support applications with large data sets, 
+including individual files that reach into the terabytes. 
+It uses a master/slave architecture, with each cluster consisting of a single NameNode that manages file system operations 
+and supporting DataNodes that manage data storage on individual compute nodes.
